@@ -1,0 +1,11 @@
+[Unit]
+Description=EcoFlow AC notify (Telegram on state change)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/srv/ecoflow/ecoflow_ac_notify.sh
+# Если хочешь — запускать не от root:
+# User=baldr
+# Group=baldr
